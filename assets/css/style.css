@@ -1,0 +1,112 @@
+:root {
+    --fixedposition: fixed;
+    --zerosize: 0;
+    --maxsize: 100%;
+}
+#bgVideo {
+    position: var(--fixedposition);
+    top: var(--zerosize);
+    bottom: var(--zerosize);
+    left: var(--zerosize);
+    right: var(--zerosize);
+    min-width: var(--maxsize);
+    min-height: var(--maxsize);
+    z-index:-1;
+}
+.container {
+    position: var(--fixedposition);
+    top: var(--zerosize);
+    bottom: var(--zerosize);
+    left: var(--zerosize);
+    right: var(--zerosize);
+    min-width: var(--maxsize);
+    min-height: var(--maxsize);
+    z-index:1;
+    overflow-y:scroll;
+  }
+.mainBox {
+    max-width:900px;
+    width:100%;
+    height:auto;
+    background-color: rgba(155,155,155,0.8);
+    border: 15px solid black;
+    border-radius:15px;
+    margin: 25px auto;
+    position:relative;
+    top:5px;
+    padding:25px;
+}
+#searchbox {
+    position:relative;
+    display:inline-block;
+    max-width:175px;
+    height:32px;
+    width:100%;
+    border: 2px solid black;
+    border-radius:5px;
+    margin:5px;
+    background-color: white;
+    color:black;
+}
+
+#viewBookingsBtn {
+    position:relative;
+    float:right;
+    right:15px;
+    margin-left:25px;
+    margin-bottom:25px;
+}
+.shadow{
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+.shadow2{
+    box-shadow: 10px 10px 5px 0px rgba(50,50,50,0.75);
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(50,50,50,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(50,50,50,0.75);
+}
+h1 {
+    background-color: rgba(55,55,55,0.8);
+    text-shadow: 2px 2px #000000;
+  }
+
+p{
+    font-size: 22px;
+    font-weight: bolder;
+}
+label {
+    font-size: 16px;
+    font-weight: bolder;
+    color:#000000;
+}
+.resultsBox {
+    width:85%;
+    height:auto;
+    padding:25px;
+    margin:50px;
+    background-color: rgba(255,255,255,0.8);
+}
+@media all and (max-width: 600px) {
+    #viewBookingsBtn {
+        position:relative;
+        display:block;
+        float:right;
+        right:5px;
+        margin-left:25px;
+        margin-bottom:25px;
+        margin-top:15px;
+        top:15px;
+    }
+    #searchbox {
+        position:relative;
+        display:block;
+    }
+    .mainBox {
+        height:auto;
+        padding:80px;
+    }
+    .cardcontainer {
+        margin:80px;
+    }
+}
