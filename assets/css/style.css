@@ -37,16 +37,17 @@
   padding: 25px;
 }
 #searchbox {
-  position: relative;
-  display: inline-block;
-  max-width: 175px;
-  height: 32px;
-  width: 100%;
-  border: 2px solid black;
-  border-radius: 5px;
-  margin: 5px;
-  background-color: white;
-  color: black;
+    position:relative;
+    display:inline-block;
+    max-width:175px;
+    height:32px;
+    width:100%;
+    border: 2px solid black;
+    border-radius:5px;
+    margin:5px;
+    background-color: white;
+    color:black;
+    padding:5px;
 }
 
 #viewBookingsBtn {
@@ -81,11 +82,13 @@ label {
   color: #000000;
 }
 .resultsBox {
-  width: 85%;
-  height: auto;
-  padding: 25px;
-  margin: 50px;
-  background-color: rgba(255, 255, 255, 0.8);
+    width:85%;
+    height:auto;
+    padding:25px;
+    margin:50px;
+    background-color: rgba(255,255,255,0.8);
+    border-radius:25px;
+    display:none;
 }
 @media all and (max-width: 600px) {
   #viewBookingsBtn {
