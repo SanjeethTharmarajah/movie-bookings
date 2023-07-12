@@ -49,6 +49,58 @@
     color:black;
     padding:5px;
 }
+#datepicker {
+    position:relative;
+    display:inline-block;
+    max-width:175px;
+    height:32px;
+    width:100%;
+    border: 2px solid black;
+    border-radius:5px;
+    margin:5px;
+    background-color: white;
+    color:black;
+    padding:5px;
+}
+#namebox {
+    position:relative;
+    display:inline-block;
+    max-width:175px;
+    height:32px;
+    width:100%;
+    border: 2px solid black;
+    border-radius:5px;
+    margin:5px;
+    background-color: white;
+    color:black;
+    padding:5px;
+}
+#movietime {
+    position:relative;
+    display:inline-block;
+    max-width:175px;
+    height:32px;
+    width:100%;
+    border: 2px solid black;
+    border-radius:5px;
+    margin:5px;
+    background-color: white;
+    color:black;
+    padding:5px;
+}
+#movietheater {
+    position:relative;
+    display:inline-block;
+    max-width:175px;
+    height:32px;
+    width:100%;
+    border: 2px solid black;
+    border-radius:5px;
+    margin:5px;
+    background-color: white;
+    color:black;
+    padding:5px;
+}
 
 #viewBookingsBtn {
   position: relative;
@@ -90,6 +142,65 @@ label {
     border-radius:25px;
     display:none;
 }
+
+/* modal container */
+.modalContainer {
+    display: none; 
+    position: fixed; 
+    z-index: 9999; 
+    padding-top: 100px;
+    left: var(--zerosize);
+    top: var(--zerosize);
+    width: var(--maxsize);
+    height: var(--maxsize);
+    background-color: rgba(0,0,0,0.9);
+    overflow-y:scroll;
+  }
+  
+  /* Modal Contents */
+  .modal-contents {
+    margin: auto;
+    padding: 25px;
+    border: 5px solid #ccc;
+    border-radius:25px;
+    width: 55%;
+    background-color: rgba(200,200,200,0.7);
+  }
+  
+  /* The Close Button style */
+  .close {
+    position:relative;
+    float: right;
+    right:-30px;
+    top:-50px;
+    color: white;
+    font-size: 32px;
+    font-weight: bolder;
+    border:2px solid #800c0c;
+    border-radius: 100%;
+    padding-top:-10px;
+    padding-bottom:0px;
+    padding-left:0px;
+    padding-right:0px;
+    background-color:#e90505;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #cccccc;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .moviecard2{
+    max-width:100px;
+    width:100%;
+    height:auto;
+    border: 2px solid #ccc;
+    border-radius:25px;
+    margin:5px;
+  }
+  
 @media all and (max-width: 600px) {
   #viewBookingsBtn {
     position: relative;
