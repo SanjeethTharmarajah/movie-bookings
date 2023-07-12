@@ -8,8 +8,15 @@
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="./assets/css/style.css">
-
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script>
+        $( function() {
+          $( "#datepicker" ).datepicker();
+        } );
+    </script>
 </head>
 <body>
     
@@ -26,6 +33,36 @@
                 <button class="btn waves-effect waves-light shadow" id="viewBookingsBtn" onclick="showBookings()"><i class="fa fa-eye"></i> View Bookings</button>
                 <div id="results" class="resultsBox shadow"></div>
             </div>
+            <div id="bookingModal" class="modalContainer">
+
+                <!-- Modal content -->
+                <div class="modal-contents">
+                  <span class="close" onclick="closemodal()">&times;</span>
+                  <div id="moviecard1" style="display:inline-block;"></div>
+                  <div id="moviecardtxt" style="display:inline-block;"></div>
+                  <p>Name: <input type="text" id="namebox"></p>
+                  <p>Date: <input type="text" id="datepicker"></p>
+                  <label for="movietime">Choose a Time:</label>
+                  <div class="input-field col s12">
+                    <select name="movietime" id="movietime">
+                        <option value="11:30 AM">11:30 AM</option>
+                        <option value="3:30 PM">3:30 PM</option>
+                        <option value="6:30 PM">6:30 PM</option>
+                    </select>
+                  </div>
+                  <label for="movietime">Choose a Theater:</label>
+                  <div class="input-field col s12">
+                    <select name="movietheater" id="movietheater">
+                        <option value="Cineplex">Cineplex</option>
+                        <option value="iMax">iMax</option>
+                        <option value="Woodside Cinema">Woodside Cinema</option>
+                    </select>
+                  </div>
+                  <br><hr><br>
+                  <center><button class="btn waves-effect waves-light shadow" onclick="storeMovies()">Book Ticket Now</button></center>
+                </div>
+                
+              </div>
         </div>
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
