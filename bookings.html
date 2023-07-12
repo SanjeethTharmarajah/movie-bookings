@@ -3,20 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movie Booking API</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Movie Tickets Bookings</title>
+    
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">     
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   
+    <link rel="stylesheet" href="./assets/css/style.css">
+   
 </head>
 <body>
-    <header class = "hero">
-        <h1 class="title"><i class="bookings"></i>Pasting Bookings</h1>
-    </header>
-    <div id="movieCard" class="card">
-        <img id="posterImage">
-        <h2 id="movieTitle">Title</h2>
-        <p id="movieDescription">Description</p>
-      </div>
-      <div class="card">
-            <button type="booking" class="backbtn">Back</button>
+        <video autoplay muted loop id="bgVideo">
+            <source src="assets/video/bg.mp4" type="video/mp4">
+        </video>
+        <div class="container">
+            <center><h1 class="shadow"><font color="white">Booked Tickets</font></h1></center>
+            <br>
+            <div id="bookings2" class="mainBox2 shadow2">
+                
+            </div>
+            <center><button class="btn waves-effect waves-light shadow" onclick="goback()">GO BACK</button></center>
+            <br>
+            <br>
         </div>
-    </body>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="./assets/js/script2.js"></script>
+</body>
 </html>
