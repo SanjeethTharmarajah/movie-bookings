@@ -8,6 +8,9 @@ Book a Movie is a one-stop booking application where the user can search up any 
 
 The site will contain two pages: the landing page for the user to search up the movies and the Booking History page which will show all their previous movie bookings. The pages will be built using HTML and styled using CSS, Materelize CSS and Jquery UI. Javascript will be utilized to incorporate the functionality of the site. The Booking details from the modal will be saved in the site under local storage. 
 
+![image](https://github.com/SanjeethTharmarajah/movie-bookings/assets/130941252/8c8d93bf-5c9e-4cfd-97b5-0d1b7f6133f7)
+
+
 # Acceptance Creteria
 
 Use a CSS framework other than Bootstrap.
