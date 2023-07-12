@@ -1,8 +1,11 @@
+//defining global variables
 var searchEl = document.getElementById("searchbox");
 var resultsEl = document.getElementById("results");
 var imgsrc1;
 var title1;
 var movieyear1;
+var ticketsArray1 = [];
+//function to search movies in OMDB api database
 function searchMovies(){
     var search1 = searchEl.value.replace(" ", "+");
     if(search1 != ""){
@@ -17,7 +20,7 @@ function searchMovies(){
     }
     
 }
-
+//function to show poster from fetched results from OMDB api database
 function showposter(data){
     var html1 = "";
     if(data.Error != "Movie not found!"){
@@ -61,11 +64,11 @@ function showposter(data){
     }
     resultsEl.style.display="block";
 }
-
+//function to get video from Youtube api
 function getvideo(query1){
     const searchTerms = query1;
 
-    const YOUTUBE_API_KEY = "AIzaSyBk3D0on_Lh1tFehCxN1C4Av6E4RHkPvyo";
+    const YOUTUBE_API_KEY = "AIzaSyCso1OEu2gB-8TJNsyIyvl2J4VqS8dd9Ik";
     const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=${searchTerms}&key=${YOUTUBE_API_KEY}`;
     
     fetch(url)
@@ -75,21 +78,66 @@ function getvideo(query1){
         document.getElementById("vdobox").src = `https://www.youtube.com/embed/${data.items[0].id.videoId}`;
     });
 }
-
+//function to show bookings modal
 function showmodal(){
     var html2="";
     var html3="";
     
 
-    html2+='<img src="' + imgsrc1 + '" class="moviecard2">';
-    html3+='<p><font color="white">Title: ' + title1 + '</font></p>';
-    html3+='<p><font color="white">Year: ' + movieyear1 + '</font></p>';
+    html2+='<img src="' + imgsrc1 + '" class="moviecard2 shadow">';
+    html3+='<p><font color="white">&nbsp;&nbsp;Title: ' + title1 + '</font></p>';
+    html3+='<p><font color="white">&nbsp;&nbsp;Year: ' + movieyear1 + '</font></p>';
     
     document.getElementById("bookingModal").style.display="block";
     document.getElementById("moviecard1").innerHTML = html2;
     document.getElementById("moviecardtxt").innerHTML = html3;
 }
-
+//function to close bookings modal
 function closemodal() {
     document.getElementById("bookingModal").style.display="none";
 }
+//function to store movie bookings in local storage
+function storeMovies(){
+    var storeTickets;
+    var usrname = document.getElementById("namebox").value;
+    var dates = document.getElementById("datepicker").value;
+    var mtime = document.getElementById("movietime");
+    var mtheater = document.getElementById("movietheater")
+    var mtime2 = mtime.options[mtime.selectedIndex].text;
+    var mtheater2 = mtheater.options[mtheater.selectedIndex].text;
+    if(usrname != "" && dates != ""){
+        var ticketsObj = {
+            "img" : imgsrc1,
+            "title" : title1,
+            "year" : movieyear1,
+            "usrname" : usrname,
+            "dates" : dates,
+            "mtimes" : mtime2,
+            "mtheaters" : mtheater2
+        };
+    
+        ticketsArray1.push(ticketsObj);
+        
+        storeTickets = JSON.stringify(ticketsArray1);
+        localStorage.setItem("tickets", storeTickets);
+        alert("Ticket successfully booked !");
+        closemodal();
+    }
+    else {
+        alert("Enter both user name and date !");
+    }
+}
+//shows bookings page
+function showBookings(){
+    window.location.href="bookings.html";
+}
+
+// loads the tickets from local storage
+function getTickets(){
+    var ticketsAll = localStorage.getItem("tickets");
+    if(JSON.parse(ticketsAll) != null){
+        ticketsArray1 = JSON.parse(ticketsAll);
+    }
+}
+//gets booking tickets from local storage on page load
+getTickets();

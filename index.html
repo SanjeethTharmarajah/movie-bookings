@@ -40,23 +40,29 @@
                   <span class="close" onclick="closemodal()">&times;</span>
                   <div id="moviecard1" style="display:inline-block;"></div>
                   <div id="moviecardtxt" style="display:inline-block;"></div>
-                  <p>Name: <input type="text" id="namebox"></p>
-                  <p>Date: <input type="text" id="datepicker"></p>
-                  <label for="movietime">Choose a Time:</label>
-                  <div class="input-field col s12">
-                    <select name="movietime" id="movietime">
-                        <option value="11:30 AM">11:30 AM</option>
-                        <option value="3:30 PM">3:30 PM</option>
-                        <option value="6:30 PM">6:30 PM</option>
-                    </select>
+                  <br>
+                  <p style="display:inline-block">Name: <input type="text" id="namebox"></p>
+                  <p style="display:inline-block">Date: <input type="text" id="datepicker"></p>
+                  <br>
+                  <div style="display:inline-block">
+                    <label for="movietime">&nbsp;Choose a Time:</label>
+                    <div class="input-field col s12">
+                      <select name="movietime" id="movietime">
+                          <option value="11:30 AM">11:30 AM</option>
+                          <option value="3:30 PM">3:30 PM</option>
+                          <option value="6:30 PM">6:30 PM</option>
+                      </select>
+                    </div>
                   </div>
-                  <label for="movietime">Choose a Theater:</label>
-                  <div class="input-field col s12">
-                    <select name="movietheater" id="movietheater">
-                        <option value="Cineplex">Cineplex</option>
-                        <option value="iMax">iMax</option>
-                        <option value="Woodside Cinema">Woodside Cinema</option>
-                    </select>
+                  <div style="display:inline-block">
+                    <label for="movietime">&nbsp;&nbsp;Choose a Theater:</label>
+                    <div class="input-field col s12">
+                      <select name="movietheater" id="movietheater">
+                          <option value="Cineplex">Cineplex</option>
+                          <option value="iMax">iMax</option>
+                          <option value="Woodside Cinema">Woodside Cinema</option>
+                      </select>
+                    </div>
                   </div>
                   <br><hr><br>
                   <center><button class="btn waves-effect waves-light shadow" onclick="storeMovies()">Book Ticket Now</button></center>
