@@ -10,6 +10,7 @@ The site will contain two pages: the landing page for the user to search up the 
 
 ![image](https://github.com/SanjeethTharmarajah/movie-bookings/assets/130941252/8c8d93bf-5c9e-4cfd-97b5-0d1b7f6133f7)
 
+https://sanjeeththarmarajah.github.io/movie-bookings/
 
 # Acceptance Creteria
 
