@@ -17,12 +17,12 @@ https://sanjeeththarmarajah.github.io/movie-bookings/
 Use a CSS framework other than Bootstrap.
 Be interactive (i.e., accept and respond to user input).
 Use at least two server-side APIs.
-Use client-side storage to store persistent data
+Use client-side storage to store persistent data.
 Be responsive
 
 # Acheivements
-Used Materialize CSS & Jquery UI
-Modal as for user inputs
-Used OMDB API and Youtube API
+Used Materialize CSS & Jquery UI.
+Modal as for user inputs.
+Used OMDB API and Youtube API.
 Booking tickets history stored in local storage.
-Made page responsive
+Made page responsive.
