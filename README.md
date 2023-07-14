@@ -11,16 +11,26 @@ The site will contain two pages: the landing page for the user to search up the 
 # Acceptance Creteria
 
 Use a CSS framework other than Bootstrap.
+
 Be interactive (i.e., accept and respond to user input).
+
 Use at least two server-side APIs.
+
 Does not use alerts, confirms, or prompts (use modals).
+
 Use client-side storage to store persistent data
+
 Be responsive
 
 # Acheivements
 Used Materialize CSS & Jquery UI
+
 Modal as for user inputs
+
 Used OMDB API and Youtube API
+
 used modal for inputs and alerts
+
 Booking tickets history stored in local storage.
+
 Made page responsive
