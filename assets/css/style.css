@@ -29,8 +29,7 @@
   }
 /* homepage main box container styles */
 .mainBox {
-    max-width:900px;
-    width:100%;
+    width:90%;
     height:auto;
     background-color: rgba(155,155,155,0.8);
     border: 15px solid black;
@@ -150,7 +149,7 @@ h1 {
 }
 /* paragraph styles */
 p{
-    font-size: 22px;
+    font-size: 18px;
     font-weight: bolder;
 }
 /* label styles */
@@ -257,6 +256,7 @@ label {
     width:100%;
     height:auto;
   }
+  /* alertbox styles */
   .alertbox {
     margin: 0 auto;
     z-index:9999;
@@ -266,6 +266,11 @@ label {
     height:auto;
     padding:25px;
     background-color: rgba(200,200,200,0.7);
+  }
+  /* hr styles */
+  hr {
+    border: 2px solid #3b726d;
+    border-radius: 5px;
   }
 /* responsive media query */
 @media all and (max-width: 600px) {
